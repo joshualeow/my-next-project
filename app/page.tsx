@@ -15,16 +15,7 @@ export default function Home() {
 
   return (
     <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <nav className="bg-white dark:bg-black p-4 shadow-md w-full top-bar">
-        <ul className="flex space-x-4 justify-between items-center">
-          <li>
-            <Link href="/" className="text-blue-500 hover:text-blue-700">Home</Link>
-          </li>
-          <li>
-            <Link href="/about" className="text-blue-500 hover:text-blue-700">About</Link>
-          </li>
-        </ul>
-      </nav>
+      
       <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
         <div className="flex items-center gap-4">
           <Image
@@ -51,7 +42,7 @@ export default function Home() {
             Launching Soon!
           </h1>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            We're excited to announce our new product! Sign up now to be one of the first to experience it.
+            We&apos;re excited to announce our new product! Sign up now to be one of the first to experience it.
           </p>
         </div>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 text-base font-medium sm:flex-row">
