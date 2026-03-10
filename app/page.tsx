@@ -42,7 +42,7 @@ export default function Home() {
             Launching Soon!
           </h1>
           <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            We&apos;re excited to announce our new product! Sign up now to be one of the first to experience it.
+            We're excited to announce our new product! Sign up now to be one of the first to experience it.
           </p>
         </div>
         <form onSubmit={handleSubmit} className="flex flex-col gap-4 text-base font-medium sm:flex-row">
