@@ -41,13 +41,7 @@ export default function Comments({ slug }: { slug: string }) {
   return (
     <div className="mt-12 border-t border-zinc-200 dark:border-zinc-700 pt-8">
       <h2 className="text-xl font-semibold text-black dark:text-zinc-50 mb-4">Comments</h2>
-      {GISCUS_REPO === 'YOUR_GITHUB_USERNAME/YOUR_REPO_NAME' ? (
-        <p className="text-zinc-500 dark:text-zinc-400 text-sm">
-          Comments are not yet configured. See <code className="bg-zinc-100 dark:bg-zinc-800 px-1 rounded">app/components/Comments.tsx</code> for setup instructions.
-        </p>
-      ) : (
-        <div ref={ref} />
-      )}
+      <div ref={ref} />
     </div>
   );
 }
