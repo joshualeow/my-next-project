@@ -8,10 +8,12 @@ import { useEffect, useRef } from 'react';
 // 3. Enable GitHub Discussions on the repo (Settings → Features → Discussions)
 // 4. Replace the placeholder values below with the values from giscus.app
 
-const GISCUS_REPO = 'YOUR_GITHUB_USERNAME/YOUR_REPO_NAME'; // e.g. 'joshualeow/my-next-project'
-const GISCUS_REPO_ID = 'YOUR_REPO_ID';                     // from giscus.app
+
+
+const GISCUS_REPO = 'joshualeow/my-next-project'; // e.g. 'joshualeow/my-next-project'
+const GISCUS_REPO_ID = 'YR_kgDORokgSw';                     // from giscus.app
 const GISCUS_CATEGORY = 'Announcements';
-const GISCUS_CATEGORY_ID = 'YOUR_CATEGORY_ID';             // from giscus.app
+const GISCUS_CATEGORY_ID = 'DIC_kwDORokgS84C4heb';             // from giscus.app
 
 export default function Comments({ slug }: { slug: string }) {
   const ref = useRef<HTMLDivElement>(null);
