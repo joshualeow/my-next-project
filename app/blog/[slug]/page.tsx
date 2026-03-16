@@ -4,7 +4,6 @@ import Nav from '../../components/Nav';
 import Comments from '../../components/Comments';
 import { posts, getPostBySlug } from '../../../lib/posts';
 
-// Pre-generate a page for every post slug at build time
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
@@ -16,28 +15,28 @@ export default async function BlogPost({ params }: { params: Promise<{ slug: str
   if (!post) notFound();
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col gap-16 py-32 px-16 bg-white dark:bg-black">
+    <div className="min-h-screen bg-white dark:bg-zinc-950 font-sans">
+      <div className="max-w-3xl mx-auto px-8 pb-24">
         <Nav />
 
-        <article>
-          <Link href="/blog" className="text-sm text-blue-500 hover:text-blue-700">
+        <article className="mt-14">
+          <Link href="/blog" className="text-sm text-zinc-400 hover:text-blue-500 transition-colors duration-200">
             ← Back to blog
           </Link>
 
           <time className="mt-6 block text-sm text-zinc-400 dark:text-zinc-500">{post.date}</time>
-          <h1 className="mt-1 text-3xl font-semibold tracking-tight text-black dark:text-zinc-50">
+          <h1 className="mt-1 text-3xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
             {post.title}
           </h1>
 
           <div
-            className="prose dark:prose-invert mt-8 max-w-none leading-8 text-zinc-600 dark:text-zinc-400"
+            className="prose dark:prose-invert mt-8 max-w-none"
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
           <Comments slug={post.slug} />
         </article>
-      </main>
+      </div>
     </div>
   );
 }

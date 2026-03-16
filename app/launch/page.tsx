@@ -8,41 +8,40 @@ export default function Launch() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Add your sign-up logic here
     console.log('Sign up email:', email);
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div className="min-h-screen bg-white dark:bg-zinc-950 font-sans">
+      <div className="max-w-3xl mx-auto px-8 pb-24">
         <Nav />
-
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            Launching Soon!
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            We&apos;re excited to announce our new product! Sign up now to be one of the first to experience it.
-          </p>
-        </div>
-
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-            required
-            className="border border-zinc-300 dark:border-zinc-700 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
-          />
-          <button
-            type="submit"
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-blue-500 px-5 text-white transition-colors hover:bg-blue-600 dark:hover:bg-blue-400 md:w-[158px]"
-          >
-            Sign Up
-          </button>
-        </form>
-      </main>
+        <section className="mt-24 flex flex-col gap-8">
+          <div>
+            <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
+              Launching Soon!
+            </h1>
+            <p className="mt-4 text-lg leading-8 text-zinc-500 dark:text-zinc-400 max-w-md">
+              We&apos;re excited to announce our new product! Sign up now to be one of the first to experience it.
+            </p>
+          </div>
+          <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:flex-row sm:items-center">
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+              required
+              className="border border-zinc-200 dark:border-zinc-700 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 bg-white dark:bg-zinc-900 text-zinc-900 dark:text-zinc-50"
+            />
+            <button
+              type="submit"
+              className="h-10 px-6 rounded-full bg-blue-500 text-sm font-medium text-white transition-colors duration-200 hover:bg-blue-600"
+            >
+              Sign Up
+            </button>
+          </form>
+        </section>
+      </div>
     </div>
   );
 }
