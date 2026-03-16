@@ -59,13 +59,19 @@ export default function Launch() {
             </button>
           </form>
           {status === 'success' && (
-            <p className="text-sm text-green-600 dark:text-green-400">You&apos;re on the list!</p>
+            <div className="rounded-lg bg-green-50 dark:bg-green-950 border border-green-200 dark:border-green-800 px-4 py-3">
+              <p className="text-sm font-medium text-green-700 dark:text-green-300">You&apos;re on the list! We&apos;ll be in touch soon.</p>
+            </div>
           )}
           {status === 'duplicate' && (
-            <p className="text-sm text-zinc-500 dark:text-zinc-400">You&apos;re already signed up!</p>
+            <div className="rounded-lg bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-700 px-4 py-3">
+              <p className="text-sm font-medium text-zinc-600 dark:text-zinc-400">You&apos;re already signed up!</p>
+            </div>
           )}
           {status === 'error' && (
-            <p className="text-sm text-red-500">Something went wrong. Please try again.</p>
+            <div className="rounded-lg bg-red-50 dark:bg-red-950 border border-red-200 dark:border-red-800 px-4 py-3">
+              <p className="text-sm font-medium text-red-700 dark:text-red-300">Something went wrong. Please try again.</p>
+            </div>
           )}
         </section>
       </div>
