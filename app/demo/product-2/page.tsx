@@ -1,9 +1,9 @@
-import Nav from './components/Nav';
+import Nav from '../../components/Nav';
 
 const sections = [
   {
     title: 'Overview',
-    body: 'Product #1 is a placeholder for your first demo product. Replace this section with a high-level description of what the product does, who it is for, and the core problem it solves.',
+    body: 'Product #2 is a placeholder for your second demo product. Replace this section with a high-level description of what the product does, who it is for, and the core problem it solves.',
   },
   {
     title: 'Key Features',
@@ -19,7 +19,7 @@ const sections = [
   },
 ];
 
-export default function ProductOne() {
+export default function ProductTwo() {
   return (
     <div className="min-h-screen bg-white dark:bg-zinc-950 font-sans">
       <div className="max-w-3xl mx-auto px-8 pb-24">
@@ -27,10 +27,10 @@ export default function ProductOne() {
 
         <section className="mt-14 mb-10">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-900 dark:text-zinc-50">
-            Product #1
+            Product #2
           </h1>
           <p className="mt-3 text-lg text-zinc-500 dark:text-zinc-400 max-w-xl">
-            A placeholder for your first product. Add your own title, description, and content to this page.
+            A placeholder for your second product. Add your own title, description, and content to this page.
           </p>
         </section>
 
