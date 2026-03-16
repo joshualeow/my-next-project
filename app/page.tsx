@@ -66,13 +66,11 @@ export default function About() {
               <p className="text-sm text-zinc-500 dark:text-zinc-400 mb-3">ST Engineering Mission Software & Services Pte Ltd</p>
               <ul className="flex flex-col gap-2">
                 {[
-                  'Architected and developed SPAs using React (TypeScript), Vite, and D3.js with route-based code-splitting for optimal performance.',
-                  'Assisted other teams on developing features in JavaFX.',
-                  'Built frontend for two production applications featuring complex interactive data visualisations and analytical dashboards, integrating with backend REST APIs for real-time data processing.',
-                  'Optimised memory usage and resolved critical memory leaks, reducing heap usage by ~10x through systematic quantisation and profiling — significantly improving stability on a Chromium-based framework.',
+                  'Built frontend for production applications featuring complex interactive data visualisations and analytical dashboards, integrating with backend REST APIs for real-time data processing.',
+                  'Optimised memory usage and resolved frontend memory leaks, improving stability on a Chromium-based framework.',
                   'Collaborated with stakeholders to prioritise features and align UI/UX designs with user requirements.',
                   'Created comprehensive technical documentation including UI wireframes, sequence diagrams, and class diagrams.',
-                  'Delivered weekly sprint requirements following agile methodology in a forward-deployed, behaviour-driven development environment.',
+                  'Delivered requirements in a forward-deployed, behaviour-driven development environment.',
                 ].map((point, i) => (
                   <li key={i} className="flex gap-3 text-sm text-zinc-600 dark:text-zinc-400 leading-6">
                     <span className="mt-2 h-1 w-1 rounded-full bg-blue-400 shrink-0" />
