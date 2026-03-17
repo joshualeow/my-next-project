@@ -11,7 +11,7 @@ const links = [
 ];
 
 const demoLinks = [
-  { href: '/', label: 'Product #1' },
+  { href: '/product1/', label: 'Product #1' },
   { href: '/demo/product-2', label: 'Product #2' },
 ];
 
@@ -19,7 +19,7 @@ export default function Nav() {
   const pathname = usePathname();
   const [demoOpen, setDemoOpen] = useState(false);
 
-  const isDemoActive = pathname === '/' || pathname.startsWith('/demo');
+  const isDemoActive = pathname.startsWith('/product1') || pathname.startsWith('/demo');
 
   return (
     <nav className="w-full flex items-center justify-between py-6 border-b border-zinc-100 dark:border-zinc-800">

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Joshua Mug — Joshua Leow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- LOADER -->
+  <div id="loader">
+    <div class="loader-brand">Joshua Leow</div>
+    <div class="loader-bar-wrap"><div id="loader-bar"></div></div>
+    <div id="loader-percent">0%</div>
+  </div>
+
+  <!-- FIXED HEADER -->
+  <header class="site-header">
+    <a href="/" class="logo">Joshua Leow</a>
+    <nav>
+      <a href="/about">About</a>
+      <a href="/blog">Blog</a>
+      <a href="/launch">Launch</a>
+    </nav>
+  </header>
+
+  <!-- HERO (100vh, solid black, normal flow) -->
+  <section class="hero-standalone" id="hero">
+    <span class="hero-label">Introducing</span>
+    <h1 class="hero-heading">
+      <span>The</span>
+      <span>Joshua</span>
+      <span>Mug.</span>
+    </h1>
+    <p class="hero-tagline">Your ritual, perfected.</p>
+    <div class="scroll-indicator">
+      <span>Scroll to explore</span>
+      <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+        <path d="M7 2v10M2.5 8l4.5 4 4.5-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- SCROLL CONTAINER (provides scroll runway) -->
+  <div id="scroll-container">
+    <div class="canvas-wrap">
+      <canvas id="canvas"></canvas>
+    </div>
+  </div>
+
+  <!-- FIXED OVERLAYS -->
+  <div id="dark-overlay"></div>
+
+  <div class="marquee-wrap">
+    <div class="marquee-text">THE JOSHUA MUG &nbsp;·&nbsp; YOUR RITUAL, PERFECTED &nbsp;·&nbsp; DARK OBSIDIAN CERAMIC &nbsp;·&nbsp; 16 FL OZ &nbsp;·&nbsp; THE JOSHUA MUG &nbsp;·&nbsp; YOUR RITUAL, PERFECTED &nbsp;·&nbsp; DARK OBSIDIAN CERAMIC &nbsp;·&nbsp; 16 FL OZ &nbsp;·&nbsp;</div>
+  </div>
+
+  <!-- SECTION 1 — Material (8–22%, slide-right, align-right) -->
+  <section class="scroll-section align-right" data-enter="8" data-leave="22" data-animation="slide-right">
+    <div class="section-inner">
+      <span class="section-label">001 / Material</span>
+      <h2 class="section-heading">Obsidian ceramic,<br>precision-fired.</h2>
+      <p class="section-body">Crafted from premium regrind ceramic with a food-grade dark glaze. Lightweight, durable, and built to hold its temperature beautifully.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 2 — Capacity (25–39%, slide-left, align-left) -->
+  <section class="scroll-section align-left" data-enter="25" data-leave="39" data-animation="slide-left">
+    <div class="section-inner">
+      <span class="section-label">002 / Capacity</span>
+      <h2 class="section-heading">16 fl oz of<br>pure comfort.</h2>
+      <p class="section-body">The perfect volume for your morning brew. Whether you take it black or with all the trimmings — the Joshua Mug holds it all.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 3 — Stats (43–57%, stagger-up, dark overlay) -->
+  <section class="scroll-section section-stats" data-enter="43" data-leave="57" data-animation="stagger-up">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="stat-row">
+          <span class="stat-number" data-value="16" data-decimals="0">0</span>
+          <span class="stat-suffix">oz</span>
+        </div>
+        <span class="stat-label">Capacity</span>
+      </div>
+      <div class="stat">
+        <div class="stat-row">
+          <span class="stat-number" data-value="473" data-decimals="0">0</span>
+          <span class="stat-suffix">ml</span>
+        </div>
+        <span class="stat-label">Volume</span>
+      </div>
+      <div class="stat">
+        <div class="stat-row">
+          <span class="stat-number" data-value="12" data-decimals="0">0</span>
+          <span class="stat-suffix">cm</span>
+        </div>
+        <span class="stat-label">Height</span>
+      </div>
+      <div class="stat">
+        <div class="stat-row">
+          <span class="stat-number" data-value="100" data-decimals="0">0</span>
+          <span class="stat-suffix">%</span>
+        </div>
+        <span class="stat-label">Pure ceramic</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4 — Durability (61–74%, clip-reveal, align-left) -->
+  <section class="scroll-section align-left" data-enter="61" data-leave="74" data-animation="clip-reveal">
+    <div class="section-inner">
+      <span class="section-label">003 / Durability</span>
+      <h2 class="section-heading">Built to outlast<br>the morning rush.</h2>
+      <p class="section-body">Dishwasher safe. Microwave safe. Chip-resistant glaze. Designed for the desk, the kitchen, and everywhere in between.</p>
+    </div>
+  </section>
+
+  <!-- SECTION 5 — Design (77–90%, rotate-in, align-right) -->
+  <section class="scroll-section align-right" data-enter="77" data-leave="90" data-animation="rotate-in">
+    <div class="section-inner">
+      <span class="section-label">004 / Design</span>
+      <h2 class="section-heading">Minimal form.<br>Maximum presence.</h2>
+      <p class="section-body">An ergonomic handle, a clean silhouette, and a finish that ages with you. Designed to earn its permanent place on your desk.</p>
+    </div>
+  </section>
+
+  <!-- CTA (91–100%, fade-up, align-left, persist) -->
+  <section class="scroll-section align-left" data-enter="91" data-leave="100" data-animation="fade-up" data-persist="true">
+    <div class="section-inner">
+      <span class="section-label">The Joshua Mug</span>
+      <h2 class="section-heading">Your ritual<br>starts here.</h2>
+      <p class="section-body">Dark Obsidian Ceramic &nbsp;·&nbsp; 16 fl oz &nbsp;·&nbsp; Handcrafted</p>
+      <p class="section-price">$28.00</p>
+      <a href="#" class="cta-button">Add to Cart</a>
+    </div>
+  </section>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
