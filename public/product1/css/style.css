@@ -149,6 +149,21 @@ canvas { display: block; width: 100%; height: 100%; }
 .align-right { justify-content: flex-end; }
 .align-right .section-inner { padding-right: 5vw; max-width: 38vw; }
 
+/* Dark backdrop behind section text for readability */
+.section-inner {
+  position: relative;
+}
+.section-inner::before {
+  content: '';
+  position: absolute;
+  inset: -24px -28px;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 16px;
+  z-index: -1;
+}
+
 /* Section content */
 .section-label {
   display: block;
