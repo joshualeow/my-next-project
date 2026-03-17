@@ -130,6 +130,18 @@ function init() {
   initMarquee();
   initCounters();
   document.querySelectorAll('.scroll-section').forEach(setupSectionAnimation);
+
+  // Hide all fixed sections (including persist) when scrolled back into the hero
+  ScrollTrigger.create({
+    trigger: '#scroll-container',
+    start: 'top top',
+    onLeaveBack: () => {
+      document.querySelectorAll('.scroll-section').forEach(s => {
+        s.style.opacity = '0';
+        s.style.pointerEvents = 'none';
+      });
+    },
+  });
 }
 
 // ─── Hero word entrance ───────────────────────────────────────────────────────
