@@ -319,5 +319,53 @@ function initCounters() {
   });
 }
 
+// ─── Waitlist form ────────────────────────────────────────────────────────────
+(function () {
+  const form  = document.getElementById('product-waitlist-form');
+  const input = document.getElementById('product-waitlist-email');
+  const msg   = document.getElementById('product-waitlist-msg');
+
+  if (!form) return;
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const email = input.value.trim();
+    msg.textContent = '';
+    msg.className = 'waitlist-msg';
+    input.disabled = true;
+    form.querySelector('button').disabled = true;
+    form.querySelector('button').textContent = 'Joining…';
+
+    try {
+      const res = await fetch('/api/waitlist', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
+      });
+
+      if (res.ok) {
+        msg.textContent = "You're on the list! We'll be in touch soon.";
+        msg.classList.add('success');
+        input.value = '';
+        form.querySelector('button').textContent = 'You\'re in!';
+      } else if (res.status === 409) {
+        msg.textContent = "You're already signed up!";
+        msg.classList.add('dupe');
+        input.disabled = false;
+        form.querySelector('button').disabled = false;
+        form.querySelector('button').textContent = 'Join the Waitlist';
+      } else {
+        throw new Error();
+      }
+    } catch {
+      msg.textContent = 'Something went wrong. Please try again.';
+      msg.classList.add('error');
+      input.disabled = false;
+      form.querySelector('button').disabled = false;
+      form.querySelector('button').textContent = 'Join the Waitlist';
+    }
+  });
+})();
+
 // ─── Start ────────────────────────────────────────────────────────────────────
 preloadFrames();
