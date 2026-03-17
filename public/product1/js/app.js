@@ -51,7 +51,7 @@ function loadFrame(index) {
     const img = new Image();
     img.onload  = () => { frames[index] = img; resolve(); };
     img.onerror = () => resolve();
-    img.src = `frames/frame_${String(index + 1).padStart(4, '0')}.${FRAME_EXT}`;
+    img.src = `/product1/frames/frame_${String(index + 1).padStart(4, '0')}.${FRAME_EXT}`;
   });
 }
 
